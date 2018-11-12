@@ -2,8 +2,8 @@
 // You can write your code in this editor
 grid_size = 64;
 
-grid_width = 16;
-grid_height = 12;
+grid_width = 20;
+grid_height = 14;
 
 load_from_tilemap = true;
 
@@ -29,8 +29,7 @@ if(load_from_tilemap) {
 			}
 		}
 	}
-	ds_grid_set(map_grid, 1, 5, 2);
-	ds_grid_set(map_grid, 1, 3, 2);
+	
 	for (var i = 0; i < grid_width; i++) {
 		for (var j = 0; j < grid_height; j++) {
 			tilemap_set(tile_id, ds_grid_get(map_grid, i, j), i, j);
@@ -39,8 +38,16 @@ if(load_from_tilemap) {
 }
 
 
+// Camera tracking code:
 
+rate = 0.2;
+vpos_w = camera_get_view_width(view_camera[0]) * 0.5;
+vpos_h = camera_get_view_height(view_camera[0]) * 0.5;
 
+vpos_x = camera_get_view_x(view_camera[0]);
+vpos_y = camera_get_view_y(view_camera[0]);
 
+new_x = 0;
+new_y = 0;
 
 
