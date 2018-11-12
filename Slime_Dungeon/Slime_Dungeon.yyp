@@ -115,6 +115,25 @@
             }
         },
         {
+            "Key": "27ea371e-ae20-467e-bd99-e7ddd72fddd8",
+            "Value": {
+                "id": "a6ff6ae1-d39b-4c8a-821e-7dbdfbf91543",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/Sprite_Highlight\/Sprite_Highlight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "30ef2323-ac6d-4923-8cf6-2a219f5d901a",
             "Value": {
                 "id": "cd4aa437-073a-4c73-bfe4-a02d70188eb9",
@@ -150,6 +169,25 @@
                 ],
                 "resourcePath": "views\/317676b1-151b-45e9-a825-196d0080994e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "46cf952b-b578-45a8-aeff-93ef94f968e0",
+            "Value": {
+                "id": "8b5901de-2c7e-4218-b675-b6ca3bc1b7c5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_highlight\/obj_highlight.yy",
+                "resourceType": "GMObject"
             }
         },
         {

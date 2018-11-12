@@ -13,3 +13,7 @@ move_sp = 7; // Movement speed
 // Don't change these ones
 hsp = 0; // Horizontal movement speed
 vsp = 0; // Vertical movement speed 
+
+cell_x = 0; cell_y = 0;
+
+mouse_in_valid_pos = false;

@@ -9,8 +9,8 @@ if (floor(x mod obj_Control.grid_size) <= move_sp) and (floor(y mod obj_Control.
 	y_cell = y / obj_Control.grid_size;
 	
 	// Which way should we move?
-    var move_x = keyboard_check(vk_right) - keyboard_check(vk_left), // Obtain the direction of the horizontal movement
-        move_y = keyboard_check(vk_down) - keyboard_check(vk_up); // Same as above, but for vertical movement
+    var move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")), // Obtain the direction of the horizontal movement
+        move_y = keyboard_check(ord("S")) - keyboard_check(ord("W")); // Same as above, but for vertical movement
 
     hsp = 0; // Reset speed values
     vsp = 0;
@@ -39,5 +39,26 @@ if (floor(x mod obj_Control.grid_size) <= move_sp) and (floor(y mod obj_Control.
 
 
 
+
 x += hsp; // Move the instance if appllcable
 y += vsp;
+
+
+// This is to check if the mouse is over a tile that can be reached
+mx_cell = floor(mouse_x / obj_Control.grid_size);
+my_cell = floor(mouse_y / obj_Control.grid_size);
+		
+x_cell = floor(x / obj_Control.grid_size);
+y_cell = floor(y / obj_Control.grid_size);
+
+if(abs(mx_cell - x_cell) <= 1 
+ && abs(my_cell - y_cell) <= 1 
+ && (my_cell != y_cell 
+ || mx_cell != x_cell)){
+	 mouse_in_valid_pos = true;
+ } else {
+	 mouse_in_valid_pos = false;
+ }
+
+// This does camera tracking
+// camera_set_view_pos(view_camera[0], x - (view_wport[0] / 2) + 32, y - (view_hport[0] / 2) + 32);
