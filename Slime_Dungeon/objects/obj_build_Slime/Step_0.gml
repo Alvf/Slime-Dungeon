@@ -45,9 +45,11 @@ y += vsp;
 
 
 // This is to check if the mouse is over a tile that can be reached
-mx_cell = floor(mouse_x / obj_Control.grid_size);
-my_cell = floor(mouse_y / obj_Control.grid_size);
+mx_cell = clamp(floor(mouse_x / obj_Control.grid_size), 0, obj_Control.grid_width - 1);
+my_cell = clamp(floor(mouse_y / obj_Control.grid_size), 0, obj_Control.grid_height - 1);
 		
+m_cell = ds_grid_get(obj_Control.map_grid, mx_cell, my_cell);		
+
 x_cell = floor(x / obj_Control.grid_size);
 y_cell = floor(y / obj_Control.grid_size);
 

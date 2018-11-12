@@ -1,5 +1,9 @@
 /// @description Load and create tilemap
 // You can write your code in this editor
+
+display_reset(0, true);
+
+
 grid_size = 64;
 
 grid_width = 20;
@@ -49,5 +53,3 @@ vpos_y = camera_get_view_y(view_camera[0]);
 
 new_x = 0;
 new_y = 0;
-
-

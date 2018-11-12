@@ -17,3 +17,7 @@ vsp = 0; // Vertical movement speed
 cell_x = 0; cell_y = 0;
 
 mouse_in_valid_pos = false;
+
+mx_cell = 0;
+my_cell = 0;
+m_cell = 0;
