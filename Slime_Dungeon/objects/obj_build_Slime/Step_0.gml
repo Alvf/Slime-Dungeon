@@ -56,11 +56,31 @@ y_cell = floor(y / obj_Control.grid_size);
 if(abs(mx_cell - x_cell) <= 1 
  && abs(my_cell - y_cell) <= 1 
  && (my_cell != y_cell 
- || mx_cell != x_cell)){
+ || mx_cell != x_cell) 
+ && ((mx_cell != 0) && (mx_cell != obj_Control.grid_width - 1) && (my_cell != 0) && (my_cell != obj_Control.grid_height - 1))){
 	 mouse_in_valid_pos = true;
  } else {
 	 mouse_in_valid_pos = false;
  }
 
 // This does camera tracking
-// camera_set_view_pos(view_camera[0], x - (view_wport[0] / 2) + 32, y - (view_hport[0] / 2) + 32);
+//Get target view position and size. size is halved so the view will focus around its center
+vpos_x = camera_get_view_x(view_camera[0]);
+vpos_y = camera_get_view_y(view_camera[0]); 
+
+if(keyboard_check(vk_shift)){
+	new_x = lerp(vpos_x, clamp(mouse_x - vpos_w - vpos_x, -vpos_w, vpos_w) + obj_build_Slime.x - vpos_w + 32, rate);
+	new_y = lerp(vpos_y, clamp(mouse_y - vpos_h - vpos_y, -vpos_h, vpos_h) + obj_build_Slime.y - vpos_h + 32, rate);
+} else {
+//Interpolate the view position to the new, relative position.
+	new_x = lerp(vpos_x, obj_build_Slime.x - vpos_w + 32, rate);
+	new_y = lerp(vpos_y, obj_build_Slime.y - vpos_h + 32, rate);
+}
+
+//Update the view position
+//camera_set_view_pos(view_camera[0], new_x, new_y);
+
+
+camera_set_view_pos(view_camera[0],
+	clamp( new_x, 0, room_width - vpos_w * 2 ),
+    clamp( new_y, 0, room_height - vpos_h * 2 ));

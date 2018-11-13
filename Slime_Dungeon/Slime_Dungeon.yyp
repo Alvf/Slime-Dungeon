@@ -39,6 +39,25 @@
     },
     "resources": [
         {
+            "Key": "06b46340-3803-4d0d-ba15-9881bef03995",
+            "Value": {
+                "id": "9d7f2775-e3f8-4009-95e7-ba74298109be",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "rooms\/rm_battle\/rm_battle.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "10f055ca-3d35-49e6-ba7d-89c72c5a0937",
             "Value": {
                 "id": "4a5dc867-99df-42fa-a3a0-a7f5c42a1e12",
@@ -91,7 +110,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "rooms\/room0\/room0.yy",
+                "resourcePath": "rooms\/rm_build\/rm_build.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -286,6 +305,25 @@
             }
         },
         {
+            "Key": "6fe6d055-e2b5-4993-956c-63995296279e",
+            "Value": {
+                "id": "8abb5d7a-39a0-40c6-93ac-2791c425c785",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_battle_button\/obj_battle_button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "71f6828d-3da4-4f0c-932f-2ff0af505090",
             "Value": {
                 "id": "6d649372-7409-4d66-b5c5-04df058cec0c",
@@ -396,6 +434,44 @@
                     "default"
                 ],
                 "resourcePath": "objects\/obj_build_Slime\/obj_build_Slime.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ab409fff-278f-47e0-8f65-808629619c86",
+            "Value": {
+                "id": "95a5cd98-b95f-45e6-b954-a362ba3caa77",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/scr_ds_grid_to_tilemap\/scr_ds_grid_to_tilemap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b2b7afab-c155-4000-968a-4023b8d6e4b5",
+            "Value": {
+                "id": "5bf7c9fd-c791-4930-bb72-09318d09e04d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_battle_Slime\/obj_battle_Slime.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -534,7 +610,7 @@
         }
     ],
     "script_order": [
-        
+        "ab409fff-278f-47e0-8f65-808629619c86"
     ],
     "tutorial": ""
 }

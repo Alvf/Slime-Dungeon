@@ -1,14 +1,18 @@
 /// @description Load and create tilemap
 // You can write your code in this editor
 
+// Fix VSYNC issues
 display_reset(0, true);
 
 
+// Create the tilemap
 grid_size = 64;
 
 grid_width = 20;
 grid_height = 14;
 
+// Set this to true to load from the tilemap in the gamemaker editor.
+// If it's false, this will just create a box around the edge.
 load_from_tilemap = true;
 
 map_grid = ds_grid_create(grid_width,grid_height);
@@ -34,22 +38,5 @@ if(load_from_tilemap) {
 		}
 	}
 	
-	for (var i = 0; i < grid_width; i++) {
-		for (var j = 0; j < grid_height; j++) {
-			tilemap_set(tile_id, ds_grid_get(map_grid, i, j), i, j);
-		}
-	}
+	script_execute(scr_ds_grid_to_tilemap);	
 }
-
-
-// Camera tracking code:
-
-rate = 0.2;
-vpos_w = camera_get_view_width(view_camera[0]) * 0.5;
-vpos_h = camera_get_view_height(view_camera[0]) * 0.5;
-
-vpos_x = camera_get_view_x(view_camera[0]);
-vpos_y = camera_get_view_y(view_camera[0]);
-
-new_x = 0;
-new_y = 0;
