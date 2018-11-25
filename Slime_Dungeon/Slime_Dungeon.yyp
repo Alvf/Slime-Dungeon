@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "7547ddb9-85b3-4e79-977a-21a8d4544b3b",
+            "Value": {
+                "id": "b8cb107a-d3fa-4a5b-9355-bb58b715bd3a",
+                "resourcePath": "sprites\\Gold_Sprite\\Gold_Sprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "81dfafd1-9e74-47c9-9201-edd9d8a945c9",
             "Value": {
                 "id": "61ab5eb8-2e35-49e9-a235-57310895d9a2",
