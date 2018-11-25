@@ -11,5 +11,10 @@ draw_set_colour(c_white);
 draw_text_transformed(80,0,string(rock), 3, 3, 0);
 
 draw_set_colour(c_green);
+draw_rectangle(128,0,192,64,false);
+draw_set_colour(c_white);
+draw_text_transformed(120,0,string(gold), 3, 3, 0);
+
+draw_set_colour(c_green);
 draw_rectangle(64 * (current_tool - 1), 0, 64 * current_tool, 64, true);
 draw_rectangle(64 * (current_tool - 1) + 1, 1, 64 * current_tool - 1, 64 - 1, true);

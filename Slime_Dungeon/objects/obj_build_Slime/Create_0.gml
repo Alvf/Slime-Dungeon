@@ -6,6 +6,7 @@ current_tool = 1;
 
 // This is how much rock they have left
 rock = 4;
+gold = 1;
 
 // Change this one to change how fast the character moves
 move_sp = 7; // Movement speed 
