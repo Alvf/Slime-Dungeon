@@ -19,11 +19,11 @@ if(load_from_tilemap) {
 	for(var i = 0; i < grid_width; i++){
 		for(var j = 0; j < grid_height; j++){
 			var tile = tilemap_get(tile_id, i, j);
-			if(tile == tile_wall_top) { tile = ds_wall };
+			if(tile == tile_wall_front || tile == tile_wall_top) { tile = ds_wall };
 			ds_grid_set(map_grid, i, j, tile);
 		}
 	}
-} else {
+} else { // Don't use this code. It's old
 	for (var i = 0; i < grid_width; i++ ){
 		for (var j = 0; j < grid_height; j++ ){
 			if(i == 0 || i == grid_width - 1 || j == 0 || j == grid_height - 1){
