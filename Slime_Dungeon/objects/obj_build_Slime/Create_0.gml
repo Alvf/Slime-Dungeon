@@ -8,6 +8,8 @@ current_tool = 1;
 rock = 4;
 gold = 1;
 
+treasure = pointer_null;
+
 // Change this one to change how fast the character moves
 move_sp = 7; // Movement speed 
 

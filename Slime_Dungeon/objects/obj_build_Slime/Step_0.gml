@@ -2,11 +2,11 @@
 
 // Check if player is aligned to the grid.
 // If so, process input to decide on movement
-if (floor(x mod obj_Control.grid_size) <= move_sp) and (floor(y mod obj_Control.grid_size) <= move_sp) // Check for grid alignment
+if (floor(x mod grid_size) <= move_sp) and (floor(y mod grid_size) <= move_sp) // Check for grid alignment
 {
 	// What tile is the player on?	
-	x_cell = x / obj_Control.grid_size;
-	y_cell = y / obj_Control.grid_size;
+	x_cell = x / grid_size;
+	y_cell = y / grid_size;
 	
 	// Which way should we move?
     var move_x = keyboard_check(ord("D")) - keyboard_check(ord("A")), // Obtain the direction of the horizontal movement
@@ -45,19 +45,19 @@ y += vsp;
 
 
 // This is to check if the mouse is over a tile that can be reached
-mx_cell = clamp(floor(mouse_x / obj_Control.grid_size), 0, obj_Control.grid_width - 1);
-my_cell = clamp(floor(mouse_y / obj_Control.grid_size), 0, obj_Control.grid_height - 1);
+mx_cell = clamp(floor(mouse_x / grid_size), 0, grid_width - 1);
+my_cell = clamp(floor(mouse_y / grid_size), 0, grid_height - 1);
 		
 m_cell = ds_grid_get(obj_Control.map_grid, mx_cell, my_cell);		
 
-x_cell = floor(x / obj_Control.grid_size);
-y_cell = floor(y / obj_Control.grid_size);
+x_cell = floor(x / grid_size);
+y_cell = floor(y / grid_size);
 
 if(abs(mx_cell - x_cell) <= 1 
  && abs(my_cell - y_cell) <= 1 
  && (my_cell != y_cell 
  || mx_cell != x_cell) 
- && ((mx_cell != 0) && (mx_cell != obj_Control.grid_width - 1) && (my_cell != 0) && (my_cell != obj_Control.grid_height - 1))){
+ && ((mx_cell != 0) && (mx_cell != grid_width - 1) && (my_cell != 0) && (my_cell != grid_height - 1))){
 	 mouse_in_valid_pos = true;
  } else {
 	 mouse_in_valid_pos = false;

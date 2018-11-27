@@ -5,12 +5,6 @@
 display_reset(0, true);
 
 
-// Create the tilemap
-grid_size = 64;
-
-grid_width = 20;
-grid_height = 14;
-
 // Set this to true to load from the tilemap in the gamemaker editor.
 // If it's false, this will just create a box around the edge.
 load_from_tilemap = true;
@@ -24,7 +18,9 @@ tile_id = layer_tilemap_get_id(tile_layer_id);
 if(load_from_tilemap) {
 	for(var i = 0; i < grid_width; i++){
 		for(var j = 0; j < grid_height; j++){
-			ds_grid_set(map_grid, i, j, tilemap_get(tile_id, i, j));
+			var tile = tilemap_get(tile_id, i, j);
+			if(tile == tile_wall_top) { tile = ds_wall };
+			ds_grid_set(map_grid, i, j, tile);
 		}
 	}
 } else {
