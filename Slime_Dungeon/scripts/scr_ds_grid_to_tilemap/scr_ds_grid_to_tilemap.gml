@@ -14,6 +14,10 @@ for (var i = 0; i < grid_width; i++) {
 					}
 				}
 			}
+			if (tile == ds_gold) {
+				tile = ds_floor;
+				instance_create_layer(i*grid_size, j*grid_size, "Instances", obj_Gold);
+			}
 			tilemap_set(tile_id, tile, i, j);
 		}
 	}

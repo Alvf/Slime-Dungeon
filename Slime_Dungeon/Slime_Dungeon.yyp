@@ -571,6 +571,25 @@
             }
         },
         {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "c6182ee5-0315-4ab3-9054-23a5c5b68867",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "options\/linux\/options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
             "Key": "ab409fff-278f-47e0-8f65-808629619c86",
             "Value": {
                 "id": "95a5cd98-b95f-45e6-b954-a362ba3caa77",

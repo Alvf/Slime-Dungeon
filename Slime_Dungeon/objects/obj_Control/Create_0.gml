@@ -4,6 +4,7 @@
 // Fix VSYNC issues
 display_reset(0, true);
 
+global.gameWidth = 750 
 
 // Set this to true to load from the tilemap in the gamemaker editor.
 // If it's false, this will just create a box around the edge.
